@@ -56,7 +56,7 @@ def quick_sort(nums):
        return nums
    else:
        elem = random.choice(nums)
-   one_nums = [n for n in nums if n < elem]
+   one_nums = [n for n in nums if n < elem] #генератор списков. Создает список на основе данного, с условием для каждого элемента
  
    two_nums = [elem] * nums.count(elem)
    three_nums = [n for n in nums if n > elem]
