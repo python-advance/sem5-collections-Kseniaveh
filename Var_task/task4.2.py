@@ -13,11 +13,11 @@ def main():
     dict_num = {}
     dict_str = {}
 
-    for k, v in dic.items():
-        if type(v) is int:
-            dict_num[k] = v
-        if type(v) is str:
-            dict_str[k] = v
+    for k, val in dic.items():
+        if type(val) is int:
+            dict_num[k] = val
+        if type(val) is str:
+            dict_str[k] = val
     print(dict_num)
     print(dict_str)
     
