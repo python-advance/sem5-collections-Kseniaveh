@@ -48,3 +48,18 @@ def just_sort(lst = np.random.randint(0, 12, 10)):
     return lst
 
 just_sort()
+
+"""Быстрая сортировка"""
+import random
+def quick_sort(nums):
+   if len(nums) <= 1:
+       return nums
+   else:
+       elem = random.choice(nums)
+   one_nums = [n for n in nums if n < elem]
+ 
+   two_nums = [elem] * nums.count(elem)
+   three_nums = [n for n in nums if n > elem]
+   return quicksort(one_nums) + two_nums + quick_sort(three_nums)
+
+quick_sort([5,8,1,0,4,9])
