@@ -31,7 +31,7 @@ def break_dict(dictionary: dict, func_lambda): #функция с входным
 def main_func():
     dic = {
         "Student1": {"name": "Ksenia", "score": 10},
-        "Student2": {"name": "Ksusha", "score": 20},
+        "Student2": {"name": "Ksusha", "score": 20}
     }
 
     one, two = break_dict(dic, lambda el: el[1]['score'] > 15) 
