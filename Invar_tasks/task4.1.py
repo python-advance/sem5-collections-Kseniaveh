@@ -63,3 +63,29 @@ def quick_sort(nums):
    return quick_sort(one_nums) + two_nums + quick_sort(three_nums)
 
 quick_sort([5,8,1,0,4,9])
+
+
+"""Плавная сортировка"""
+def Smooth_Sort(lst):
+    def downHeap(lst, k, n):
+        new_elem = lst[k]
+        while 2*k+1 < n:
+            child = 2*k+1
+            if child+1 < n and lst[child] < lst[child+1]:
+                child += 1
+            if new_elem >= lst[child]:
+                break
+            lst[k] = lst[child]
+            k = child
+        lst[k] = new_elem
+    size = len(lst)
+    for i in range(size//2-1,-1,-1):
+        downHeap(lst, i, size)
+    for i in range(size-1,0,-1):
+        temp = lst[i]
+        lst[i] = lst[0]
+        lst[0] = temp
+        downHeap(lst, 0, i)
+    return lst
+
+#print(Smooth_Sort(array))
