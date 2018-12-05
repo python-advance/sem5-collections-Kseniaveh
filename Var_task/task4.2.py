@@ -36,9 +36,9 @@ def main_func():
 
     one, two = break_dict(dic, lambda el: el[1]['score'] > 15) 
 
-    print("Словарь 1:")
+    print("Словарь 1")
     print(one)
-    print("Словарь 2:")
+    print("Словарь 2")
     print(two)
 
 
