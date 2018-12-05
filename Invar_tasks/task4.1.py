@@ -62,7 +62,7 @@ def quick_sort(nums):
    three_nums = [n for n in nums if n > elem]
    return quick_sort(one_nums) + two_nums + quick_sort(three_nums)
 
-quick_sort([5,8,1,0,4,9])
+#print(quick_sort([5,8,1,0,4,9]))
 
 
 """Плавная сортировка"""
